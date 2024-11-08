@@ -114,6 +114,10 @@ on boot
     chown system /sys/devices/system/cpu/hyp_core_ctl/enable
     chown system /sys/devices/system/cpu/hyp_core_ctl/hcc_min_freq
 
+    # Charging control
+    chown system system /sys/class/oplus_chg/battery/mmi_charging_enable
+    chmod 0660 /sys/class/oplus_chg/battery/mmi_charging_enable
+
 on property:vendor.display.lcd_density=560
    setprop dalvik.vm.heapgrowthlimit 256m
 
